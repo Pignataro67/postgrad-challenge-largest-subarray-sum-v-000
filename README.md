@@ -9,8 +9,16 @@ Take a look at an example:
 ```javascript  
 let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
 
-function largestSubarraySum(array){
- // code to write here
+function largestSubarraySum(array) {
+let maxSum = 0;
+  let partialSum = 0;
+
+  for (let item of array) { 
+    partialSum += item; 
+    maxSum = Math.max(maxSum, partialSum); 
+    if (partialSum < 0) partialSum = 0; 
+  }
+  return maxSum;
 }
 
 largestSubarraySum(array)
