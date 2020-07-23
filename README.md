@@ -9,7 +9,7 @@ Take a look at an example:
 ```javascript  
 let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
 
-function largestSubarraySum(array) {
+let largestSubarraySum = (array) => {
   let currentSum = 0
   let largestSum = 0
   
