@@ -9,32 +9,8 @@ Take a look at an example:
 ```javascript  
 let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
 
-function largestSubarraySum(arr){
-   var max_so_far = Number.NEGATIVE_INFINITY;
-    var leftIndex = 0,
-        rightIndex = arr.length - 1,
-        len = arr.length;
-
-    for (var i = 0; i < len; i++) {
-
-        for (var j = i; j < len; j++) {
-            maxSum = 0;
-            for (var k = i; k <= j; k++) {
-                maxSum += arr[k];
-
-                if (max_so_far < maxSum) {
-                    leftIndex = i;
-                    max_so_far = maxSum;
-                    rightIndex = j;
-                }
-            }
-        }
-    }
-    return {
-        left: leftIndex,
-        right: rightIndex,
-        final_max_sum_subArray: max_so_far
-    };
+function largestSubarraySum(array){
+ // code to write here
 }
 
 largestSubarraySum(array)
