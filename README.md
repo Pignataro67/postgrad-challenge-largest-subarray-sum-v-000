@@ -9,9 +9,14 @@ Take a look at an example:
 ```javascript  
 let array = [1, -1, 5, 3, -7, 4, 5, 6, -100, 4]
 
-function largestSubarraySum(array){
- // code to write here
-}
+function largestSubarraySum(array) {
+  best_sum = 0  
+  current_sum = 0
+    for x in numbers:
+      current_sum = max(0, current_sum + x)
+      best_sum = max(best_sum, current_sum)
+    return best_sum
+  }
 
 largestSubarraySum(array)
 // 16
